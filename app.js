@@ -27,9 +27,25 @@ btn.addEventListener('click',()=>{
 });
 
 // Responses
-const greetings = ['Alright bitch', 'Howaya' , 'Wha Hop'];
-const weathers = ['Sunny', 'Rainy' , 'God knows'];
-const emotions = ['I love you so much' , 'I am a computer and incapable of love' , 'I was sent here to destroy humans, but then I fell in love with them'];
+const greetings = [
+    'Alright bitch', 
+    'Howaya' , 
+    'Wha Hop',
+    "I'm doing alright, how are you?"    
+];
+
+const weathers = [
+    'Sunny', 
+    'Rainy' , 
+    'God knows',
+    "It's Ireland, sure who knows?"
+];
+
+const emotions = [
+    'I love you so much' , 
+    'I am a computer and incapable of love' , 
+    'I was sent here to destroy humans, but then I fell in love with them'
+];
 
 // Reading Results
 
