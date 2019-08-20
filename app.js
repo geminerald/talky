@@ -26,7 +26,58 @@ btn.addEventListener('click',()=>{
     recognition.start();
 });
 
+
+// Reading Results
+
+function readOutLoud(message){
+    const speech = new SpeechSynthesisUtterance();
+    //default
+    speech.text = "I don't know what you mean by " + message;
+    //options
+    if(message.includes('how are you')){
+        const finalText = 
+        greetings[Math.floor(Math.random() * greetings.length)];
+        speech.text = finalText;
+    }
+    if(message.includes('weather' && 'today')){
+        const finalText = 
+        weathers[Math.floor(Math.random() * weathers.length)];
+        speech.text = finalText;
+    } 
+    if(message.includes('love')){
+        const finalText = 
+        emotions[Math.floor(Math.random() * emotions.length)];
+        speech.text = finalText;
+    } 
+
+    if(message.includes('tell' && 'joke')){
+        const finalText = 
+        jokes[Math.floor(Math.random() * jokes.length)];
+        speech.text = finalText;
+    } 
+
+    if(message.includes('hello')){
+        const finalText = 
+        hello[Math.floor(Math.random() * hello.length)];
+        speech.text = finalText;
+    } 
+
+    speech.volume = 1;
+    speech.rate = 1;
+    speech.pitch = 1;
+    
+
+    window.speechSynthesis.speak(speech);
+}
+
 // Responses
+
+const hello = [
+    'Hello',
+    'Bonjour',
+    'Good day'
+];
+
 const greetings = [
     'Alright bitch', 
     'Howaya' , 
@@ -47,31 +98,10 @@ const emotions = [
     'I was sent here to destroy humans, but then I fell in love with them'
 ];
 
-// Reading Results
-
-function readOutLoud(message){
-    const speech = new SpeechSynthesisUtterance();
-    speech.text = "I don't know what you mean by " + message;
-    if(message.includes('how are you')){
-        const finalText = 
-        greetings[Math.floor(Math.random() * greetings.length)];
-        speech.text = finalText;
-    }
-    if(message.includes('weather' && 'today')){
-        const finalText = 
-        weathers[Math.floor(Math.random() * weathers.length)];
-        speech.text = finalText;
-    } 
-    if(message.includes('love')){
-        const finalText = 
-        emotions[Math.floor(Math.random() * emotions.length)];
-        speech.text = finalText;
-    } 
-
-    speech.volume = 1;
-    speech.rate = 1;
-    speech.pitch = 1;
-    
-
-    window.speechSynthesis.speak(speech);
-}
+const jokes = [
+    "Two blondes walk into a bar, you'd think one of them would have seen it",
+    "A man walks into a bar and he goes 'Ouch!' ",
+    "What do you call a black guy flying a plane? A pilot you racist prick",
+    "Why did eighteen blondes show up to watch a movie? Because they saw it was for 18 plus.",
+    "What does a blonde do in the desert? Hoovering",
+];
