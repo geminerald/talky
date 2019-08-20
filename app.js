@@ -46,7 +46,7 @@ function readOutLoud(message){
     } 
     if(message.includes('love')){
         const finalText = 
-        emotions[Math.floor(Math.random() * emotions.length)];
+        love[Math.floor(Math.random() * love.length)];
         speech.text = finalText;
     } 
 
@@ -92,7 +92,7 @@ const weathers = [
     "It's Ireland, sure who knows?"
 ];
 
-const emotions = [
+const love = [
     'I love you so much' , 
     'I am a computer and incapable of love' , 
     'I was sent here to destroy humans, but then I fell in love with them'
