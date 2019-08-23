@@ -34,10 +34,10 @@ function readOutLoud(message){
     //default
     speech.text = "I don't know what you mean by " + message;
     //options
-    if(message.includes('what time is it'){
+    if(message.includes('what time is it')){
         const finalText = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         speech.text = finalText;
-    })
+    }
 
     if(message.includes('how are you')){
         const finalText = 
