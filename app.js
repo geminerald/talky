@@ -35,7 +35,10 @@ function readOutLoud(message){
     speech.text = "I don't know what you mean by " + message;
     //options
     if(message.includes('what time is it')){
-        const finalText = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let today = new Date();
+        let hours = today.getHours();
+        let minutes = today.getMinutes();
+        const finalText = "The time is " + hours + ":" + minutes;
         speech.text = finalText;
     }
 
