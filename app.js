@@ -25,7 +25,7 @@ recognition.onresult = function(event){
 
 btn.addEventListener('click',()=>{
     recognition.start();
-});
+});git 
 
 btn.addEventListener('touchstart',()=>{
     recognition.start();
