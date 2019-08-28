@@ -23,9 +23,9 @@ recognition.onresult = function(event){
 
 //add listener to button
 
-btn.addEventListener('click',()=>{
-    recognition.start();
-});
+//btn.addEventListener('click',()=>{
+  //  recognition.start();
+//});
 
 btn.addEventListener('touchstart',()=>{
     recognition.start();
