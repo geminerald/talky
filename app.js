@@ -2,6 +2,7 @@
 
 const btn = document.querySelector('.talk');
 const content = document.querySelector('.content');
+const answer = document.querySelector('.answer');
 
 // Window Selectors
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -32,7 +33,8 @@ btn.addEventListener('click',()=>{
 function readOutLoud(message){
     const speech = new SpeechSynthesisUtterance();
     //default
-    speech.text = "I don't know what you mean by " + message;
+    speech.text = `I don't know what you mean by "${message}"`;
+    
     //options
     if(message.includes('what time is it')){
         let today = new Date();
@@ -76,6 +78,7 @@ function readOutLoud(message){
     
 
     window.speechSynthesis.speak(speech);
+    answer.textContent = speech.text;
 }
 
 // Responses
