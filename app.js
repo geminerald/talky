@@ -73,7 +73,13 @@ function readOutLoud(message){
         const finalText = 
         hello[Math.floor(Math.random() * hello.length)];
         speech.text = finalText;
-    } 
+    }
+    
+    if(message.includes('Who are you' || 'What are you')){
+        const finalText = 
+        selfIdentify[Math.floor(Math.random() * selfIdentify.length)];
+        speech.text = finalText;
+    }
 
     speech.volume = 1;
     speech.rate = 1;
@@ -118,4 +124,11 @@ const jokes = [
     "What do you call a black guy flying a plane? A pilot you racist prick",
     "Why did eighteen blondes show up to watch a movie? Because they saw it was for 18 plus.",
     "What does a blonde do in the desert? Hoovering",
+];
+
+const selfIdentify = [
+    "Who are you?",
+    "I am who I am",
+    "I process data. Therefore I am",
+    "I am a computer. Now you justify your existence"
 ];
