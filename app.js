@@ -25,7 +25,7 @@ recognition.onresult = function(event){
 
 btn.addEventListener('click',()=>{
     recognition.start();
-});git 
+}); 
 
 btn.addEventListener('touchstart',()=>{
     recognition.start();
@@ -52,6 +52,13 @@ function readOutLoud(message){
         greetings[Math.floor(Math.random() * greetings.length)];
         speech.text = finalText;
     }
+    
+    if(message.includes('what are you')){
+        const finalText = 
+        selfIdentify[Math.floor(Math.random() * selfIdentify.length)];
+        speech.text = finalText;
+    }
+   
     if(message.includes('weather' && 'today')){
         const finalText = 
         weathers[Math.floor(Math.random() * weathers.length)];
@@ -75,12 +82,7 @@ function readOutLoud(message){
         speech.text = finalText;
     }
     
-    if(message.includes('Who are you' || 'What are you')){
-        const finalText = 
-        selfIdentify[Math.floor(Math.random() * selfIdentify.length)];
-        speech.text = finalText;
-    }
-
+    
     speech.volume = 1;
     speech.rate = 1;
     speech.pitch = 1;
