@@ -4,7 +4,7 @@ const btn = document.querySelector('.talk');
 const content = document.querySelector('.content');
 const answer = document.querySelector('.answer');
 
-// Window Selectors
+// Window / voice Selectors
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
